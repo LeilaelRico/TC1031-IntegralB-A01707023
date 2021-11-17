@@ -303,7 +303,7 @@ string Graph::print_path(vector<vector <int>> &path, int start, int goal){
 	int node =  path[goal][0];
 	stack<int> reverse;
 	reverse.push(goal);
-	auxiliar << "path:";
+	//auxiliar << "path:";
 	while (node != start) {
 
 		reverse.push(node);
