@@ -17,4 +17,3 @@
 16 Recovery_Item Purifying_Ember 1
 17 Recovery_Item Sacred_Water 1
 18 Destination Doll_Shrine 1
-
