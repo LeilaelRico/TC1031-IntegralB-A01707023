@@ -113,7 +113,6 @@ int main() {
 
                 for(int i = 0; i<ite.size(); i++) {
 
-                    cout<<"\n--------------------------------";
                     cout<<"\nPosition: "<<ite[i].getPosition()<<
                     ", "<<"Type: "<<ite[i].getType()<<
                     ", "<<"Name: "<<ite[i].getName()<<
@@ -125,14 +124,18 @@ int main() {
 
             case 2:
 
+                cout<< "Item position:" <<endl;
                 cout << cor.BFS(0,18) << endl;
+                cout << "To show the item information, please use the first option"<<endl;
             
             break;
 
 
             case 3:
 
+                cout<< "Item position:" <<endl;
                 cout << cor.DFS(0,18) << endl;
+                cout << "To show the item information, please use the first option"<<endl;
 
             break;
 
