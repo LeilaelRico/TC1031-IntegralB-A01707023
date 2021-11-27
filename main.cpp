@@ -17,51 +17,6 @@ Matrícula: A01707023.
 using namespace std;
 
 
-/*void loadItems()
-{
-
-    Item it;
-    vector<Item> ite;
-    ifstream itList("items.txt");
-    int pos, qua;
-    string typ, nam;
-
-    while(itList.peek() != EOF)
-    {
-
-        if(itList>>pos>>typ>>nam>>qua)
-        {
-
-            it.setPosition(pos);
-            it.setType(typ);
-            it.setName(nam);
-            it.setQuantity(qua);
-            ite.push_back(it);
-
-        }
-
-    }
-    itList.close();
-}
-
-
-void showItems(vector<Item> m)
-{
-
-    for(int i = 0; i<m.size(); i++)
-    {
-
-        cout<<"\n--------------------------------";
-        cout<<"\nPosition: "<<m[i].getPosition()<<
-        ", "<<"Type: "<<m[i].getType()<<
-        ", "<<"Name: "<<m[i].getName()<<
-        ", "<<"Quantity: "<<m[i].getQuantity()<<endl;
-
-    }
-
-}*/
-
-
 void menu() {
     cout<<"\n--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**"<<endl;
     cout<<"1. Show item list."<<endl;
@@ -98,8 +53,8 @@ int main() {
     itList.close();
 
     cor.loadGraphList("coordinates.txt", 19, 53);
-    cor.BFS(0,18);
-    cor.DFS(0,18);
+    //cor.BFS(0,18);
+    //cor.DFS(0,18);
 
     do{
 
