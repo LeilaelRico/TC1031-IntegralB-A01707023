@@ -26,12 +26,20 @@ void menu() {
     cout<<"--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**"<<endl;
 }
 
+
+void menu1() {
+    cout<<"1. From the south path."<<endl;
+    cout<<"2. From north-east path."<<endl;
+    cout<<"3. From the west path."<<endl;
+}
+
+
 int main() {
 
     Item it;
     vector<Item> ite;
     ifstream itList("items.txt");
-    int pos, qua, opt;
+    int pos, qua, opt, opt1;
     string typ, nam;
     Graph cor;
 
@@ -52,9 +60,7 @@ int main() {
     }
     itList.close();
 
-    cor.loadGraphList("coordinates.txt", 19, 53);
-    //cor.BFS(0,18);
-    //cor.DFS(0,18);
+    cor.loadGraphList("coordinates.txt", 21, 57);
 
     do{
 
@@ -79,22 +85,52 @@ int main() {
 
             case 2:
 
-                cout<< "Item position:" <<endl;
-                cout << cor.BFS(0,18) << endl;
-                cout << "To show the item information, please use the first option"<<endl;
+                menu1();
+                cout << "Choose one of the following options" << endl;
+                cin >> opt1;
+
+                if (opt1 == 1) {
+                    cout<< "Item position:" <<endl;
+                    cout << cor.BFS(0,18) << endl;
+                    cout << "To show the item information, please use the first option"<<endl;
+                } else if (opt1 == 2) {
+                    cout<< "Item position:" <<endl;
+                    cout << cor.BFS(19,18) << endl;
+                    cout << "To show the item information, please use the first option"<<endl;
+                } else if (opt1 == 3) {
+                    cout<< "Item position:" <<endl;
+                    cout << cor.BFS(20,18) << endl;
+                    cout << "To show the item information, please use the first option"<<endl;
+                } else {
+                    cout<<"Invalid option, please, try again."<<endl;
+                }
             
             break;
 
 
             case 3:
 
-                cout<< "Item position:" <<endl;
-                cout << cor.DFS(0,18) << endl;
-                cout << "To show the item information, please use the first option"<<endl;
+                menu1();
+                cout << "Choose one of the following options" << endl;
+                cin >> opt1;
+
+                if (opt1 == 1) {
+                    cout<< "Item position:" <<endl;
+                    cout << cor.DFS(0,18) << endl;
+                    cout << "To show the item information, please use the first option"<<endl;
+                } else if (opt1 == 2) {
+                    cout<< "Item position:" <<endl;
+                    cout << cor.DFS(19,18) << endl;
+                    cout << "To show the item information, please use the first option"<<endl;
+                } else if (opt1 == 3) {
+                    cout<< "Item position:" <<endl;
+                    cout << cor.DFS(20,18) << endl;
+                    cout << "To show the item information, please use the first option"<<endl;
+                } else {
+                    cout<<"Invalid option, please, try again."<<endl;
+                }
 
             break;
-
-
         }
 
     }
