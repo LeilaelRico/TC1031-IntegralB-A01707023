@@ -86,7 +86,7 @@ int main() {
             case 2:
 
                 menu1();
-                cout << "Choose one of the following options" << endl;
+                cout << "Choose one of the following options: ";
                 cin >> opt1;
 
                 if (opt1 == 1) {
@@ -111,7 +111,7 @@ int main() {
             case 3:
 
                 menu1();
-                cout << "Choose one of the following options" << endl;
+                cout << "Choose one of the following options: ";
                 cin >> opt1;
 
                 if (opt1 == 1) {

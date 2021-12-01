@@ -34,17 +34,13 @@ private:
 		int *adjMatrix;
 
 public:
-		void loadGraphMat(string, int, int);
-
-		void loadGraphList(string, int, int); // Para listas.
 
 		Graph(int);
 		Graph();
-		void addEdgeAdjMatrix(int, int);
+
+		void loadGraphList(string, int, int); // Para listas.
 
 		void addEdgeAdjList(int, int); // Para listas.
-
-		string printAdjMat();
 
 		string printAdjList(); // Para listas.
 
@@ -62,28 +58,6 @@ public:
 };
 
 
-void Graph::loadGraphMat(string name, int a, int b){
-
-	adjMatrix = new int [a*b];
-	nodes = a;
-	for (int i = 0; i < a*b; i++)
-		adjMatrix[i] = 0;
-		string line;
-		ifstream lee (name);
-		int u, v;
-		if (lee.is_open()){
-			while (getline(lee, line)){
-				u = stoi(line.substr(1));
-				v = stoi(line.substr(4));
-				addEdgeAdjMatrix(u,v);
-			}
-			lee.close(); // Closes the file
-		} else {
-			cout << "Unable to open file";
-		}
-}
-
-
 Graph::Graph() {
 	edgesList = edgesMat = 0;
 }
@@ -99,13 +73,6 @@ Graph::Graph(int n) {
 
 }
 
-void Graph::addEdgeAdjMatrix(int u, int v){
-
-	adjMatrix[u*nodes+v] = 1;
-	adjMatrix[v*nodes+u] = 1;
-	edgesMat++;
-
-}
 
 string Graph::printAdjList(){
 
@@ -122,17 +89,6 @@ string Graph::printAdjList(){
     }
 		return aux.str();
 
-}
-
-
-string Graph::printAdjMat(){
-	stringstream aux;
-	for (int i = 0; i < nodes; i++){
-	   for (int j = 0; j < nodes; j++){
-			 aux << adjMatrix[i*nodes+j] << " ";
-		 }
-  }
-	return aux.str();
 }
 
 
