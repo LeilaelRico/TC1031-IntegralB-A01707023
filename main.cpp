@@ -62,7 +62,7 @@ int main() {
     }
     itList.close();
 
-    int arrint[ite.size()];
+    vector<int> arrint;
 
     cor.loadGraphList("coordinates.txt", 21, 57);
 
@@ -141,13 +141,13 @@ int main() {
 
                 for (int i = 0; i<ite.size(); i++){
 
-                    arrint[i] = {ite[i].getQuantity()};
+                    arrint.push_back(ite[i].getQuantity());
 
                 }
 
-                countSort(arrint, 20);
-                cout << "Array after Sorting: ";
-                display(arrint, 20);
+                cout << "Items sorted: ";
+                countSort(arrint);
+                printArray(arrint);
 
             break;
         }

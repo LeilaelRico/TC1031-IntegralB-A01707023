@@ -14,6 +14,7 @@ Matrícula: A01707023.
 
 #include "item.h"
 #include "graph.h"
+#include "Csort.h"
 using namespace std;
 
 int main(int argc, char* argv[]) {
@@ -93,4 +94,24 @@ int main(int argc, char* argv[]) {
     }else{
         cout << "Fail" << endl;
     }
+
+    vector<int> an_arr = { 0, 1, 2, 5, 5, 8, 10, 11 };
+    vector<int> arr = { 10, 11, 0, 2, 5, 5, 1, 8 };
+
+    cout << "\n" <<"9. Esperada: " << endl;
+    
+    printArray(an_arr);
+
+    cout << "\nPrograma: " << "\n";
+    countSort(arr);
+    printArray(arr);
+
+
+    if (an_arr == arr){
+        cout << "\nSuccess" << endl;
+    }else{
+        cout << "\nFail" << endl;
+    }
+
+
 }
