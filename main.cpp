@@ -14,6 +14,7 @@ Matrícula: A01707023.
 
 #include "item.h"
 #include "graph.h"
+#include "Csort.h"
 using namespace std;
 
 
@@ -22,7 +23,8 @@ void menu() {
     cout<<"1. Show item list."<<endl;
     cout<<"2. Show fastest path to destination."<<endl;
     cout<<"3. Show path to destination picking some objects."<<endl;
-    cout<<"4. Exit."<<endl;
+    cout<<"4. Sort items by quantity."<<endl;
+    cout<<"5. Exit."<<endl;
     cout<<"--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**--**"<<endl;
 }
 
@@ -59,6 +61,8 @@ int main() {
 
     }
     itList.close();
+
+    int arrint[ite.size()];
 
     cor.loadGraphList("coordinates.txt", 21, 57);
 
@@ -131,11 +135,26 @@ int main() {
                 }
 
             break;
+
+
+            case 4:
+
+                for (int i = 0; i<ite.size(); i++){
+
+                    arrint[i] = {ite[i].getQuantity()};
+
+                }
+
+                countSort(arrint, 20);
+                cout << "Array after Sorting: ";
+                display(arrint, 20);
+
+            break;
         }
 
     }
 
-    while(opt != 4);
+    while(opt != 5);
 
     return 0;
 }
