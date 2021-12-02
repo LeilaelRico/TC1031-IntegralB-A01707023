@@ -1,7 +1,7 @@
 # Fatal Frame V: 'Items' de la zona 'Unfathomable Forest'.
 **Proyecto Integral "B" de Programación de Estructuras de Datos.**   
 
-En este proyecto se muestran todas las cosas que pueden recorgerse de esta zona durante el último capítulo del juego en la dificultad *normal*, de igual manera, registra el punto de inicio en la entrada  y el destino por el que se debe de avanzar en el centro-norte del mismo.
+En este proyecto se muestran todas las cosas que pueden recorgerse de esta zona durante el último capítulo del juego en la dificultad *normal*, de igual manera, registra el punto de inicio en la entrada (puede ser en la entrada del sur, oeste o noreste) y el destino por el que se debe de avanzar en el centro-norte del mismo.
 
 ![grafo_FFV](graph.png)   
 *Al no poder tomar una imagendel mapa completo, decidí incorporar una de un grafo que **fuera cercano** a las posiciones de los items.*
@@ -9,8 +9,8 @@ En este proyecto se muestran todas las cosas que pueden recorgerse de esta zona 
 El programa carga dos archivos con extensión *.txt* y despliega su contenido haciendo uso de 3 funciones disponibles en el menú:   
 
 * Mostrar la lista de objetos: Muestra los datos del archivo *items.txt* después de que estos pasen por una clase que los clasifica por tipos.   
-* Mostrar la ruta más rápida para llegar al destino: Muestra los items que pueden ser recogidos en una ruta eficiente hacia el destino haciendo uso de *coordinates.txt* después de ser insertados en un grafo.   
-* Mostrar la ruta hacia el destino recogiendo algunos objetos: Haciendo uso del mismo archivo de texto anteriormente mencionado, muestra una ruta que le permite al jugador recoger una mayor cantidad de objetos de camino al destino por una de las tres entradas.   
+* Mostrar la ruta más rápida para llegar al destino: Muestra los items que pueden ser recogidos en una ruta eficiente hacia el destino haciendo uso de *coordinates.txt* después de ser insertados en un grafo, dentro de la opción aparecerá un pequeño menú que permite seleccionar al usuario su punto de partida.   
+* Mostrar la ruta hacia el destino recogiendo algunos objetos: Haciendo uso del mismo archivo de texto anteriormente mencionado, muestra una ruta que le permite al jugador recoger una mayor cantidad de objetos de camino al destino por una de las tres entradas. Como en la opción anterior, dentro de la opción aparecerá un pequeño menú que permite seleccionar al usuario su punto de partida.   
 * Ordenar la cantidad de los Items: Se hace uso del *Counting Algorithm* para llevar a cabo esta operación; solamente muestra las cantidades y no las relaciona con sus respectivos nombres o elementos del objeto de la clase.
 **Nota:** Para ver la posición que las funciones indican, será necesario desplegar la lista de items (opción 1).
 
