@@ -1,7 +1,10 @@
 # Fatal Frame V: 'Items' de la zona 'Unfathomable Forest'.
 **Proyecto Integral "B" de Programación de Estructuras de Datos.**   
 
-En este proyecto se muestran todas las cosas que pueden recorgerse de esta zona durante el último capítulo del juego en la dificultad *normal*, de igual manera, registra el punto de inicio en la entrada del sur del mapa y el destino por el que se debe de avanzar en el centro-norte del mismo. Hasta el momento, esta es la única ruta que se considera y, por esta misma razón, los algoritmos no mostrarán un recorrido que permita recoger objetos que estén alejados de esta ruta.   
+En este proyecto se muestran todas las cosas que pueden recorgerse de esta zona durante el último capítulo del juego en la dificultad *normal*, de igual manera, registra el punto de inicio en la entrada  y el destino por el que se debe de avanzar en el centro-norte del mismo.
+
+![grafo_FFV](graph.png)   
+*Al no poder tomar una imagendel mapa completo, decidí incorporar una de un grafo que **fuera cercano** a las posiciones de los items.*
 
 El programa carga dos archivos con extensión *.txt* y despliega su contenido haciendo uso de 3 funciones disponibles en el menú:   
 
@@ -24,11 +27,19 @@ Para dos de las tres funciones disponibles, se hace uso del algoritmo *Breadth-F
 
 ### Hace un análisis de complejidad correcto y completo para todo el programa y sus compenetes.
 
-* El grafo, que es el elemento principal en este programa, tiene una complejidad de ***O(n + m)*** para el pero de sus casos, esto también aplica para los algortimos de búsqueda utilizados.
+* El grafo, que es el elemento principal en este programa, tiene una complejidad de ***O(n + m)*** para el peor de sus casos, esto también aplica para los algortimos de búsqueda utilizados.
+* El *Counting Sort* posee una complejidad de ***O(n + k)*** para el peor de sus casos en lo que respecta a tiempo, mientras que, para la complejidad de espacio, para el peor de sus casos posee una de ***O(k)***.
 
 ### Presenta Casos de Prueba correctos y completos para todas las funciones y procedimientos del programa.
 
-Texto
+Se creó un archivo llamado *maintest.cpp* en el cual se evaluaron las funciones principales contenidas en *graph.h*, *Csort.h* e *item.h*.
+* .printAdjList(): Devuelve la lista de adyacencia que se tiene entre los nodos.
+* .DFS(inicio, fin): Ejecuta el algoritmpo de navegación de nodos *Depth-First Search* el cual muestra una ruta que siempre elige el nodo adycente de mayor tamaño hasta llegar al fin.
+* .BFS(inicio, fin): Ejecuta el algoritmpo de navegación de nodos *Breadth-First Search* el cual muestra la ruta *óptima* para llegar al destino; analiza las direcciones que los nodos adyacentes pueden tomar para elegir la más apropiada.
+* .setName/Position/Quantity/Type(Valor **int** o **string**): Los sets de la clase *item* funcionan similar para todas las partes del objeto; permiten obtener una parte específica del objeto con un tipo de dato específico, por ejemplo, *.setNombre()* recibe un dato tipo **string** el cual recibe la clasificación de *nombre* dentro del objeto.   
+* .getName/Position/Quantity/Type(): Muestra el contenido de un objeto creado por la clase *item* para cada una de sus partes.   
+* printArray(*nombre*): Imprime en pantalla el contenido de un array, esto se logra mediante un ciclo *for* que imprime el dato en la *i-ésima* posición del mismo.
+* countSort(*nombre*): Se encarga de ordenar los datos dentro de un array mediante el algoritmo con un nombre similar al de la función, para mostrarlo ordenado en pantalla, es necesario utilizar la función anteriormente descrita.   
 
 ## SEG0702A Tecnologías de Vanguardia
 
