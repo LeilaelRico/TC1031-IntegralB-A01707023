@@ -39,3 +39,7 @@ Texto
 ### Describe cada algoritmo de la estructura (inserción, consulta, etc...) de forma clara y con ejemplos.
 
 Texto
+
+## Recursos utilizados
+
+* https://www.geeksforgeeks.org/counting-sort/
